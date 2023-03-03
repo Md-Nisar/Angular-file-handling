@@ -1,0 +1,32 @@
+<h2>1. Create response object of file and store it in cache</h2>
+<br><br>
+
+<main>
+  <section>
+    <h2>Current file : <strong style="color:red">{{APP.fileName}}</strong></h2>
+  </section>
+
+  <section>
+    <div class="form-group">
+      <label for="imgFile">Choose an Image file</label>
+      <input type="file" name="imgFile" id="imgFile" accept="image/*"
+      (change)="chooseFile($event)">
+    </div>
+    <br>
+    <div class="form-group">
+      <label for="jsonFile">Choose a JSON file</label>
+      <input type="file" name="jsonFile" id="jsonFile" accept="application/json, .json, text/json"
+      (change)="chooseFile($event)">
+    </div>
+  </section>
+  <br>
+  <section>
+    <button type="button" (click)="createResponseObject()"> Create response object</button><br><br>
+    <button type="button" (click)="saveInCache()"> Save in cache</button><br><br>
+    <button type="button" (click)="displayCurrentFile()"> Display current file</button><br><br>
+    <button type="button" (click)="displayFileFromCache()">Display file from cache</button>
+    <pre class="file-content"></pre>
+    <div class="image-container"></div>
+    
+  </section>
+</main>

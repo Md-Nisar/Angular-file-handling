@@ -1,0 +1,29 @@
+<h2>1. Files Gathering</h2>
+<br><br>
+<form action="/" method="post">
+  <table>
+    <tr>
+      <td><label for="file-input">Choose file(s)</label></td>
+      <td> <input type="file" name="file-input" id="file-input" multiple accept=".pdf"
+         (change)="chooseFiles($event)">
+        <!--
+         Specify MIME types using accept attribute
+         application/json, .json, text/json
+         image/*, .jpeg, .png, .gif
+        -->
+      </td>
+    </tr>
+
+    <tr>
+      <td> <label for="">Show/Hide input:file control</label></td>
+      <td> <button type="button" (click)="toggleInputFile()">Toggle</button></td>
+    </tr>
+
+    <tr>
+      <td>Alternate option to choose file</td>
+      <td> <!--Better for accessiblity-->
+        <button type="button" (click)="pickFiles($event)">Pick file(s)</button>
+      </td>
+    </tr>
+  </table>
+</form>
